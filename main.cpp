@@ -37,7 +37,7 @@ void Login(Administrator &admin)
             exit(0);
         }
     }
-    cout << "Do you want to modify or create a password? (Y/N)" << endl;
+    cout << "Do you want to modify or create a password? (Y/N): ";
     cin >> input;
     if (strcmp(input, "N") == 0 || strcmp(input, "n") == 0)
         cout << endl;
