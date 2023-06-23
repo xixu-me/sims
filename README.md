@@ -1,6 +1,6 @@
 # Student Information Management System
 
-## 学生信息管理系统
+### 学生信息管理系统
 
 - Student.h：这个头文件定义了一个名为 Student 的类，它是一个学生类，用于存储学生信息。
 - Student.cpp：这个源文件实现了 Student 类中的函数。
