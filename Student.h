@@ -10,7 +10,7 @@ const int MAXN = 20;
 
 class Student
 {
-protected:
+private:
     int no;
     char name[MAXN];
     bool is_male;
