@@ -176,7 +176,7 @@ void Menu(Administrator &admin)
             cin >> input3;
             if (input3)
             {
-                cout << "Enter no.: ";
+                cout << "Please enter no.: ";
                 cin >> input2;
                 if (admin.erase(input2))
                     cout << "Deleted successfully!" << endl;
@@ -186,7 +186,7 @@ void Menu(Administrator &admin)
             }
             else
             {
-                cout << "Enter name: ";
+                cout << "Please enter name: ";
                 cin >> input1;
                 if (admin.erase(input1))
                     cout << "Deleted successfully!" << endl;
