@@ -30,7 +30,7 @@ void Login(Administrator &admin)
     if (strcmp("", password) != 0)
     {
         cout << "Please enter your password to log in to the Student Information Management System: ";
-        cin >> input;
+        cin >> setw(MAXN) >> input;
         if (strcmp(input, password) != 0)
         {
             cout << "Wrong password!" << endl;
@@ -38,13 +38,13 @@ void Login(Administrator &admin)
         }
     }
     cout << "Do you want to modify or create a password? (Y/N): ";
-    cin >> input;
+    cin >> setw(MAXN) >> input;
     if (strcmp(input, "N") == 0 || strcmp(input, "n") == 0)
         cout << endl;
     else if (strcmp(input, "Y") == 0 || strcmp(input, "y") == 0)
     {
         cout << "Please enter a password: ";
-        cin >> input;
+        cin >> setw(MAXN) >> input;
         std::ofstream out("password.dat", ios::binary);
         out.write(input, MAXN);
         out.close();
@@ -66,7 +66,7 @@ void Menu(Administrator &admin)
     {
         cout << endl
              << "Please enter instructions: Find(F) Add(A) Edit(E) Delet(D) Sort(S) Average(V) Display(P) Quit(Q): ";
-        cin >> input1;
+        cin >> setw(MAXN) >> input1;
         // #################### Find ####################
         if (strcmp("F", input1) == 0 || strcmp("f", input1) == 0)
         {
@@ -91,7 +91,7 @@ void Menu(Administrator &admin)
             else if (input2 == 1)
             {
                 cout << "Please enter name: ";
-                cin >> input1;
+                cin >> setw(MAXN) >> input1;
                 int i = admin.find(input1);
                 if (i == -1)
                     cout << "Not found!" << endl;
@@ -106,7 +106,7 @@ void Menu(Administrator &admin)
             else if (input2 == 2)
             {
                 cout << "Please enter major: ";
-                cin >> input1;
+                cin >> setw(MAXN) >> input1;
                 cout << "class: ";
                 cin >> input2;
                 vector<int> vi = admin.findbycls(input1, input2);
@@ -129,13 +129,13 @@ void Menu(Administrator &admin)
         else if (strcmp("A", input1) == 0 || strcmp("a", input1) == 0)
         {
             cout << "Please enter name: ";
-            cin >> input1;
+            cin >> setw(MAXN) >> input1;
             cout << "male(1) or female(0): ";
             cin >> input3;
             cout << "age: ";
             cin >> input2;
             cout << "major: ";
-            cin >> input4;
+            cin >> setw(MAXN) >> input4;
             cout << "class: ";
             cin >> input5;
             cout << "score: ";
@@ -153,13 +153,13 @@ void Menu(Administrator &admin)
             else
             {
                 cout << "name: ";
-                cin >> input1;
+                cin >> setw(MAXN) >> input1;
                 cout << "male(1) or female(0): ";
                 cin >> input3;
                 cout << "age: ";
                 cin >> input7;
                 cout << "major: ";
-                cin >> input4;
+                cin >> setw(MAXN) >> input4;
                 cout << "class: ";
                 cin >> input5;
                 cout << "score: ";
@@ -187,7 +187,7 @@ void Menu(Administrator &admin)
             else
             {
                 cout << "Please enter name: ";
-                cin >> input1;
+                cin >> setw(MAXN) >> input1;
                 if (admin.erase(input1))
                     cout << "Deleted successfully!" << endl;
                 else

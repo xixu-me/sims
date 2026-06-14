@@ -157,7 +157,7 @@ void Administrator::loadfile()
     char major[MAXN];
     int cls;
     double score;
-    while (in >> no >> name >> gender >> age >> major >> cls >> score)
+    while (in >> no >> std::setw(MAXN) >> name >> std::setw(MAXN) >> gender >> age >> std::setw(MAXN) >> major >> cls >> score)
     {
         s.setno(no);
         s.setname(name);
